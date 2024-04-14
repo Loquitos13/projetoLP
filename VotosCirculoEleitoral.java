@@ -4,7 +4,7 @@ import java.util.*;
 public class VotosCirculoEleitoral implements Serializable {
     private String nomeCirculo;
     private Map<String, VotosConcelho> votosPorConcelho;
-    
+
     public VotosCirculoEleitoral(String nomeCirculo) {
         this.nomeCirculo = nomeCirculo;
         this.votosPorConcelho = new HashMap<>();

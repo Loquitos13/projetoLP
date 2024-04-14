@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class testeficheiros {
     public static void main(String[] args) {
         // Caminho do arquivo .dat
-        List<String> Filelist = new ArrayList<>(Arrays.asList("circulo_coimbra.dat", "circulo_coimbra.dat", "Orange")) ;
+        List<String> Filelist = new ArrayList<>(Arrays.asList("circulo_coimbra.dat"));//, "circulo_coimbra.dat", "Orange")) ;
 
         for(String file:Filelist){
             try {
@@ -21,7 +21,7 @@ public class testeficheiros {
                         if (obj == null) break; // Se não houver mais objetos para ler, sai do loop
 
                         System.out.println(obj.getNomeCirculo());
-                        // Itera sobre o mapa de votos por concelho
+                        // Integra    o mapa de votos por concelho
                         for (Map.Entry<String, VotosConcelho> entry : obj.getVotosPorConcelho().entrySet()) {
                             String concelho = entry.getKey();
                             VotosConcelho votosConcelho = entry.getValue();
@@ -37,9 +37,9 @@ public class testeficheiros {
                 dis.close();
                 
             } catch (IOException e) {
-                System.out.println("Ocorreu um erro ao ler o arquivo: " + e.getMessage());
+                System.out.println("Ocorreu um erro ao ler o ficheiro: " + e.getMessage());
             } catch (ClassNotFoundException e) {
-                System.out.println("Ocorreu um erro ao ler o arquivo: " + e.getMessage());
+                System.out.println("Ocorreu um erro ao ler o ficheiro: " + e.getMessage());
             }
         }
         
